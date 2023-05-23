@@ -4,10 +4,16 @@
 <img [src]="person.avatar" alt="Imagen Unsplash">
 
 <!-- Property Binding, pasarle props que estan en el componente a los atributos, es mejor property binding para atributos -->
-<input type="text" [value]="person.name">
+<label for="cambiar">Cambia tu nombre aqui: </label>
+<input id="cambiar" type="text" [value]="person.name" (keyup)="changeName($event)">
 <progress max="100" [value]="person.age"></progress>
 
 <!-- Event binding -->
 <button (click)="toggleButton()">Toggle</button>
 <button (click)="increaseAge()" [disabled]="btnDisabled">Aumentar edad</button>
+
+<!-- $ para enviar eventos nativos del dom -->
+<div class="box" (scroll)="onScroll($event)">
+  <p>El deporte nos mantiene en forma. Te mantiene atento. Nos une. A través del deporte podemos cambiar vidas. Ya sea a través de historias de atletas inspiradores. Animándote a ponerte en marcha. Ofreciéndote artículos deportivos con las últimas tecnologías para mejorar tu rendimiento. Supera tu mejor marca personal. adidas es el hogar del corredor, del jugador de básquet, del joven futbolista y del entusiasta del fitness. Del aventurero que escapa de la ciudad los fines de semana. De la instructora de yoga que enseña nuevas posturas. Las 3 Franjas se ven en el mundo de la música. En el escenario, en los festivales. Nuestra ropa deportiva para mujer y para hombre te mantiene concentrado antes de que suene el silbato. Durante la carrera. Y en la línea de meta. Estamos aquí para apoyar a los creadores. Mejorar su juego. Sus vidas. Y cambiar el mundo. </p>
+</div>
 
