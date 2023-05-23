@@ -1,4 +1,9 @@
-<h1>Mi nombre es: {{ completeName }} y te doy la bienvenida a {{ title }}</h1>
-<!-- strinng interpolacion -->
+<h1>Hola {{ person.name }}, te doy la bienvenida a {{ title }}</h1>
+<!-- strinng interpolacion, para ingresar contenido -->
 <h4>Continua hacia abajo... ⤵ </h4>
-<img src="{{ urlImg }}" alt="Imagen Unsplash">
+<img [src]="person.avatar" alt="Imagen Unsplash">
+
+<!-- Property Binding, pasarle props que estan en el componente a los atributos, es mejor property binding para atributos -->
+<button [disabled]="btnDisabled">Presiona aqui!</button>
+<input type="text" [value]="completeName">
+<progress max="100" [value]="person.age"></progress>
