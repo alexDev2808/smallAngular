@@ -6,12 +6,20 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ConceptosComponent } from './components/conceptos/conceptos.component';
 import { NavComponent } from './components/nav/nav.component';
+import { PopularesComponent } from './components/populares/populares.component';
+import { RegistrarseComponent } from './components/registrarse/registrarse.component';
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConceptosComponent,
-    NavComponent
+    NavComponent,
+    PopularesComponent,
+    RegistrarseComponent,
+    IniciarSesionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
