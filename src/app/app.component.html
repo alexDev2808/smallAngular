@@ -56,3 +56,20 @@
   <p *ngSwitchDefault>No hay coincidencias</p>
 
 </div>
+
+<h3>Clases y estilos</h3>
+<input type="text" required #clasesEstilos="ngModel" [(ngModel)]="person.name">
+<p class="message-error" [class.invalido]="clasesEstilos.invalid">El campo es requerido</p>
+
+<label for="">Carrera</label>
+<input type="text" [(ngModel)]="person.carrera" required #carreraInput="ngModel">
+<p [style.font-style]="carreraInput.invalid ? 'italic' : 'normal'">Programador</p>
+
+<div class="imgWidth">
+  <div>
+    <input type="text" [(ngModel)]="width">
+  </div>
+  <div>
+    <img [src]="person.avatar" [style.width.px]="width" alt="">
+  </div>
+</div>
