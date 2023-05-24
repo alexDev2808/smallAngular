@@ -23,6 +23,8 @@ export class AppComponent {
     }
   ]
 
+  nombres: string[] = ["Alexis", "Juli", "Fernanda", "Martha", "Mariela", "Ruby"];
+  nuevoNombre = '';
 
   toggleButton() {
     this.btnDisabled = !this.btnDisabled;
@@ -38,5 +40,12 @@ export class AppComponent {
   changeName(event: Event) {
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
+  }
+  agregarNombre() {
+    this.nombres.push(this.nuevoNombre);
+    this.nuevoNombre = '';
+  }
+  borrarNombre(index: number) {
+    this.nombres.splice(index, 1);
   }
 }

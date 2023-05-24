@@ -32,3 +32,11 @@
   <h3>{{ vipContent[0].name }}</h3>
   <img [src]="vipContent[0].img" alt="">
 </ng-template>
+
+<!-- ngFor -->
+<input type="text" [(ngModel)]="nuevoNombre" required>
+<button (click)="agregarNombre()">Agregar nombre</button>
+<ul>
+  <li *ngIf="nombres.length == 0">No hay nombres</li>
+  <li *ngFor="let nombre of nombres;index as i">{{ i + 1 }} = {{ nombre }} <button (click)="borrarNombre(i)">Borrar</button></li>
+</ul>
