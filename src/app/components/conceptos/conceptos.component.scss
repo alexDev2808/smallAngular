@@ -1,0 +1,59 @@
+img {
+  width: 220px;
+}
+.box {
+  height: 200px;
+  width: 500px;
+  overflow: auto;
+  background-color: rgb(223, 126, 0);
+}
+.products--grid{
+  display: flex;
+  flex-direction: column;
+  div {
+    img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    h2,p {
+      color: rgb(44, 43, 43);
+    }
+  }
+}
+
+.message-error {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  opacity: 0;
+  transition: all ease-in .4s;
+
+}
+
+.invalido {
+  opacity: 1;
+}
+
+.imgWidth {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.line-error {
+  height: 0;
+  border-bottom: 1px solid;
+  &.invalid {
+    border-color: red;
+  }
+  &.valid {
+    border-color: green;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .products--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+  }
+}
