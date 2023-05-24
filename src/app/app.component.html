@@ -24,3 +24,11 @@
 <input type="number" min="18" max="28" required #ageInput="ngModel" [(ngModel)]="person.age">
 <p>Valid: {{ ageInput.valid }}</p>
 
+
+<!-- ngIf -->
+<input type="text" required [(ngModel)]="person.age">
+<p *ngIf="person.age < 18; else mayorEdad">Mi contenido Basic</p>
+<ng-template #mayorEdad>
+  <h3>{{ vipContent[0].name }}</h3>
+  <img [src]="vipContent[0].img" alt="">
+</ng-template>
