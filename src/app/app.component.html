@@ -73,3 +73,27 @@
     <img [src]="person.avatar" [style.width.px]="width" alt="">
   </div>
 </div>
+
+<!-- ngClass y ngStyle -->
+
+<input type="text" [(ngModel)]="person.carrera" required #carreraInput="ngModel">
+<hr class="line-error" [ngClass]="{
+  'valid': carreraInput.valid,
+  'invalid': carreraInput.invalid
+}">
+
+<div class="imgWidth">
+  <div>
+    <input max="200" type="number" [(ngModel)]="box.width">
+    <input type="number" [(ngModel)]="box.heigth">
+    <input type="color" [(ngModel)]="box.background">
+  </div>
+  <div>
+    <div [ngStyle]="{
+      'width.px' : box.width,
+      'height.px' : box.heigth,
+      'background' : box.background,
+      'display' : 'block'
+    }"></div>
+  </div>
+</div>

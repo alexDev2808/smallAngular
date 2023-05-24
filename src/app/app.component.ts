@@ -11,6 +11,11 @@ export class AppComponent {
   title = 'Mi tienda En Linea!';
   btnDisabled = true;
   width = 10;
+  box = {
+    width: 100,
+    heigth: 100,
+    background: 'blue'
+  }
   person = {
     name: "Alexis",
     age: 22,
