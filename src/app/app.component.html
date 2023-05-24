@@ -48,3 +48,11 @@
     <h4>{{ product.price }}</h4>
   </div>
 </div>
+
+
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'alexis'">Programador</p>
+  <p *ngSwitchCase="'martha'">Biotecnologa</p>
+  <p *ngSwitchDefault>No hay coincidencias</p>
+
+</div>
