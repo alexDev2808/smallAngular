@@ -97,3 +97,21 @@
     }"></div>
   </div>
 </div>
+
+<h3>Formulario</h3>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
+  <div class="input-group">
+    <label for="name">Nombre:</label>
+    <input type="text" required [(ngModel)]="register.name" id="name" name="name">
+  </div>
+  <div class="input-group">
+    <label for="email">Email:</label>
+    <input type="email" required [(ngModel)]="register.email" id="email" name="email">
+  </div>
+  <div class="input-group">
+    <label for="password">Password:</label>
+    <input type="password" required [(ngModel)]="register.password" id="password" name="password">
+  </div>
+
+  <button type="submit" [disabled]="myForm.invalid">Registrar</button>
+</form>
