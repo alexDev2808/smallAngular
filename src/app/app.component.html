@@ -17,3 +17,10 @@
   <p>El deporte nos mantiene en forma. Te mantiene atento. Nos une. A través del deporte podemos cambiar vidas. Ya sea a través de historias de atletas inspiradores. Animándote a ponerte en marcha. Ofreciéndote artículos deportivos con las últimas tecnologías para mejorar tu rendimiento. Supera tu mejor marca personal. adidas es el hogar del corredor, del jugador de básquet, del joven futbolista y del entusiasta del fitness. Del aventurero que escapa de la ciudad los fines de semana. De la instructora de yoga que enseña nuevas posturas. Las 3 Franjas se ven en el mundo de la música. En el escenario, en los festivales. Nuestra ropa deportiva para mujer y para hombre te mantiene concentrado antes de que suene el silbato. Durante la carrera. Y en la línea de meta. Estamos aquí para apoyar a los creadores. Mejorar su juego. Sus vidas. Y cambiar el mundo. </p>
 </div>
 
+<!-- Escuchar y enviar al componente los valores y desde el componente setear la propiedad -->
+<!-- ngModel -->
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name">
+<p>Valid: {{ nameInput.valid }}</p>
+<input type="number" min="18" max="28" required #ageInput="ngModel" [(ngModel)]="person.age">
+<p>Valid: {{ ageInput.valid }}</p>
+
