@@ -41,9 +41,9 @@
   <li *ngFor="let nombre of nombres;index as i">{{ i + 1 }} = {{ nombre }} <button (click)="borrarNombre(i)">Borrar</button></li>
 </ul>
 
-<div>
+<div class="products--grid">
   <div *ngFor="let product of products">
-    <img [src]="product.image" alt="imagen del producto" width="320">
+    <img [src]="product.image" alt="imagen del producto">
     <h2>{{ product.name }}</h2>
     <h4>{{ product.price }}</h4>
   </div>
