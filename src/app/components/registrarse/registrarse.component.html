@@ -1,1 +1,62 @@
-<p>registrarse works!</p>
+<section class="vh-100 bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Crea tu cuenta</h2>
+
+              <form (ngSubmit)="registrarse()" #myForm="ngForm">
+
+                <div class="form-outline mb-4">
+                  <input [(ngModel)]="person.nombre" name="nombre" type="text" id="nombre" class="form-control form-control-lg" required />
+                  <label class="form-label" for="nombre">Escribe tu nombre</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input [(ngModel)]="person.correo" name="correo" required type="email" id="correo" class="form-control form-control-lg" />
+                  <label class="form-label" for="correo">Escribe tu correo electronico</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input [(ngModel)]="person.contrasena" name="contrasena" required type="password" id="contrasena" class="form-control form-control-lg" />
+                  <label class="form-label" for="contrasena">Elige tu contraseña</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input [(ngModel)]="person.repetir_contrasena" name="r_contrasena" required type="password" id="r_contrasena" class="form-control form-control-lg" />
+                  <label class="form-label" for="r_contrasena">Repite tu contraseña</label>
+                  <h6 *ngIf="person.contrasena !== person.repetir_contrasena" class="msg-error">Las contraseñas no coinciden</h6>
+                </div>
+
+                <!-- <div>
+                  <h6 *ngIf="" class="msg-error" style="text-align: center;">Debes aceptar los terminos</h6>
+
+                  <div class="form-check d-flex justify-content-center mb-5">
+                    <input required class="form-check-input me-2" type="checkbox" value="" id="terminos" />
+                    <label class="form-check-label" for="terminos">
+                      Acepto los <a href="#!" class="text-body"><u>Terminos de Servicio</u></a>
+                    </label>
+                  </div>
+                </div> -->
+
+                <div class="d-flex justify-content-center">
+                  <button type="submit" [disabled]="myForm.invalid"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Registrar</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Ya tienes una cuenta? <a href="#!"
+                    class="fw-bold text-body"><u>Accede aqui</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class RegistrarseComponent {
 
+  btnDeshabilitado = true;
+  person = {
+    nombre: '',
+    correo: '',
+    contrasena: '',
+    repetir_contrasena: ''
+  }
+
+  registrarse() {
+    console.log(this.person);
+
+  }
 }
