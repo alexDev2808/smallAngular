@@ -1,1 +1,6 @@
-<p>home works!</p>
+<div class="container">
+  <h2 class="fs-1 fw-bold mt-4">Inicio</h2>
+  <div class="container container--grid">
+      <app-movie *ngFor="let pelicula of peliculas" [pelicula]="pelicula"></app-movie>
+  </div>
+</div>

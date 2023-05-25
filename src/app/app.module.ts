@@ -10,6 +10,7 @@ import { PopularesComponent } from './components/populares/populares.component';
 import { RegistrarseComponent } from './components/registrarse/registrarse.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { HomeComponent } from './components/home/home.component';
+import { MovieComponent } from './components/movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeComponent } from './components/home/home.component';
     PopularesComponent,
     RegistrarseComponent,
     IniciarSesionComponent,
-    HomeComponent
+    HomeComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
